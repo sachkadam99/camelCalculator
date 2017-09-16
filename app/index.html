@@ -16,14 +16,171 @@
         <div class="row">
             <div class="column">
                 <a href="/en" class="logo"><img src="/images/camel-logo-2.png"></a>
-                <h1>How many camels for your boyfriend?</h1>
+                <h1>How many camels for your friend?</h1>
             </div>
         </div>
     </div>
   </header>
 
     <div class="container">
-      this is test
+      <form name="male" method="post" action="calculateCamel()">
+
+        <div class="row form-row">
+            <div class="four-column column">
+                <h4><label for="age">Older</label> <output for="age" id="ageCount">50</output></h4>
+            </div>
+            <div class="eight-column column">
+                <input type="range" min="0" max="100" value="50" id="age" 
+              step="1" oninput="outputUpdate(value)">
+            </div>
+        </div>
+
+        <div class="row form-row">
+            <div class="four-column column">
+                <h4><label for="height">Height</label> <output for="height" id="volume">50</output></h4>
+            </div>
+            <div class="eight-column column">
+                <input type="range" min="0" max="100" value="50" id="height" 
+              step="1" oninput="outputUpdate(value)">
+            </div>
+        </div>
+
+        <div class="row form-row">
+            <div class="four-column column">
+                <h4>Haircolor</h4>
+            </div>
+            <div class="eight-column column">
+                <select name="haircolor" class="full-width">
+                    <option value="blonde">blonde</option>
+                    <option value="brown">brown</option>
+                    <option value="black">black</option>
+                    <option value="red">red</option>
+                    <option value="grey">grey</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="row form-row">
+            <div class="four-column column">
+                <h4>Hairlength</h4>
+            </div>
+            <div class="eight-column column">
+                <div>
+                    <nav class="attributes-content">
+                        <input type="radio" name="hair" value="long" id="l" checked="checked" />
+                        <label for="l">
+                            long
+                        </label>
+
+                        <input type="radio" name="hair" value="middle" id="m" />
+                        <label for="m">
+                            middle
+                        </label>
+
+                        <input type="radio" name="hair" value="short" id="s" />
+                        <label for="s">
+                            short
+                        </label>
+
+                        <input type="radio" name="hair" value="bald" id="g" />
+                        <label for="g">
+                            bald
+                        </label>
+                    </nav>
+                </div>
+            </div>
+        </div>
+
+        <div class="row form-row">
+          <div class="four-column column">
+              <h4>Eyecolor</h4>
+          </div>
+          <div class="eight-column column">
+              <label class="custom-radio">
+                  <input type="radio" name="eyecolor" value="blue" checked="checked">
+                  <span class="label-content">blue</span>
+              </label>
+              <label class="custom-radio">
+                  <input type="radio" name="eyecolor" value="green">
+                  <span class="label-content">green</span>
+              </label>
+              <label class="custom-radio">
+                  <input type="radio" name="eyecolor" value="brown">
+                  <span class="label-content">brown</span>
+              </label>
+              <label class="custom-radio">
+                  <input type="radio" name="eyecolor" value="grey">
+                  <span class="label-content">grey</span>
+              </label>
+          </div>
+      </div>
+
+      <div class="row form-row">
+        <div class="four-column column">
+            <h4>Beard</h4>
+        </div>
+        <div class="eight-column column">
+            <div>
+                <nav class="attributes-content">
+                    <input type="radio" name="beard" value="none" id="beard-a" checked="checked" />
+                    <label for="beard-a">
+                        <img src="/img/beard-none.png" alt="none">
+                    </label>
+
+                    <input type="radio" name="beard" value="small" id="beard-b" />
+                    <label for="beard-b">
+                        <img src="/img/beard-small.png" alt="small">
+                    </label>
+
+                    <input type="radio" name="beard" value="middle" id="beard-c" />
+                    <label for="beard-c">
+                        <img src="/img/beard-middle.png" alt="middle">
+                    </label>
+
+                    <input type="radio" name="beard" value="large" id="beard-d" />
+                    <label for="beard-d">
+                        <img src="/img/beard-full.png" alt="large">
+                    </label>
+                </nav>
+            </div>
+        </div>
+      </div>
+
+
+      <div class="row form-row">
+          <div class="four-column column">
+              <h4>Body</h4>
+          </div>
+          <div class="eight-column column">
+              <div>
+                  <nav class="attributes-content">
+                      <input type="radio" name="body" value="muscle" id="biceps-a" checked="checked" />
+                      <label for="biceps-a">
+                          <img src="/img/body-1.png" alt="A">
+                      </label>
+
+                      <input type="radio" name="body" value="normal" id="biceps-b" />
+                      <label for="biceps-b">
+                          <img src="/img/body-2.png" alt="B">
+                      </label>
+
+                      <input type="radio" name="body" value="chubby" id="biceps-c" />
+                      <label for="biceps-c">
+                          <img src="/img/body-3.png" alt="C">
+                      </label>
+                  </nav>
+              </div>
+          </div>
+      </div>
+
+        <div class="row">
+          <div class="twelve columns submit-row">
+              <input type="hidden" name="gender" value="male">
+              <button type="submit" class="button-primary">calculate</button>
+          </div>
+      </div>
+
+      </form>
     </div>
 
     <footer class="container">

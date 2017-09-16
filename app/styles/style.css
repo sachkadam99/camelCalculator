@@ -8,6 +8,14 @@ body {
     margin: 0;
 }
 
+body {
+    font-size: 1.5em;
+    line-height: 1.6;
+    font-weight: 400;
+    font-family: Helvetica,Arial,sans-serif;
+    color: #222
+}
+
 article,aside,details,figcaption,figure,footer,header,hgroup,main,menu,nav,section,summary {
     display: block;
 }
@@ -50,7 +58,7 @@ header h1 {
     padding-right: 5px;
     position: absolute;
     left: 98px;
-    top: 30%;
+    top: 50%;
     -webkit-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
@@ -74,7 +82,7 @@ header h1 {
         font-size: 46px;
         position: absolute;
         left: 140px;
-        top: 30%;
+        top: 50%;
         transform: translateY(-50%);
     }
 }
@@ -115,6 +123,83 @@ button::-moz-focus-inner,input::-moz-focus-inner {
     padding: 0;
 }
 
+.full-width {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+select {
+    width: 80%;
+}
+
+input, textarea, select, fieldset {
+    margin-bottom: 1.5rem;
+}
+
+input[type="email"], input[type="number"], input[type="search"], input[type="text"], input[type="tel"], input[type="url"], input[type="password"], textarea, select {
+    padding: 6px 10px;
+    background-color: #fff;
+    border: 1px solid #D1D1D1;
+    border-radius: 4px;
+    box-shadow: none;
+    box-sizing: border-box;
+}
+
+button, select {
+    text-transform: none;
+}
+
+button, input, optgroup, select, textarea {
+    color: inherit;
+    font: inherit;
+    margin: 0;
+}
+.button.button-primary, button.button-primary, input[type="submit"].button-primary, input[type="reset"].button-primary, input[type="button"].button-primary {
+    color: #FFF;
+    background-color: #e8972c;
+    border-color: #e8972c;
+}
+
+.button, button, input[type="submit"], input[type="reset"], input[type="button"] {
+    display: inline-block;
+    height: 38px;
+    padding: 0 30px;
+    color: #555;
+    text-align: center;
+    font-size: 11px;
+    font-weight: 600;
+    line-height: 38px;
+    letter-spacing: .1rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    white-space: nowrap;
+    background-color: transparent;
+    border-radius: 4px;
+    border: 1px solid #bbb;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+button, html input[type="button"], input[type="reset"], input[type="submit"] {
+    -webkit-appearance: button;
+    cursor: pointer;
+}
+
+button, .button {
+    width: 100%;
+    line-height: 48px;
+    height: 48px;
+    font-size: 1.2rem;
+}
+
+@media (min-width: 550px) {
+    button, .button {
+        width: auto;
+        line-height: 48px;
+        height: 48px;
+    }
+}
+
 .container {
     position: relative;
     width: 100%;
@@ -134,24 +219,299 @@ button::-moz-focus-inner,input::-moz-focus-inner {
         width:85%;
         padding: 0;
     }
-    .column {
-        margin-left: 4%;
-    }
-    .column:first-child {
-        margin-left: 0;
-    }
 }
 
 @media (min-width: 550px) {
     .container {
         width:80%;
     }
+    .column {
+        margin-left: 4%;
+    }
+    .column:first-child {
+        margin-left: 0;
+    }
+    .four-column.column {
+        width: 30.6666666667%;
+    }
+    .eight-column.column {
+        width: 65.3333333333%;
+    }
 }
+
+.form-row {
+    border-bottom: 1px solid #e7e7e7;
+    padding-top: 1.5em;
+}
+
+.form-row h4 {
+    font-size: 2rem;
+}
+
+output {
+    float: right;
+    display: inline-block;
+    font-size: 2rem;
+    color: #666;
+}
+
+
+h1,h2,h3,h4,h5,h6 {
+    margin-top: 0;
+    margin-bottom: 2rem;
+    font-weight: 300;
+}
+
+h1 {
+    font-size: 4.0rem;
+    line-height: 1.2;
+    letter-spacing: -.1rem;
+}
+
+h2 {
+    font-size: 3.6rem;
+    line-height: 1.25;
+    letter-spacing: -.1rem;
+}
+
+h3 {
+    font-size: 3.0rem;
+    line-height: 1.3;
+    letter-spacing: -.1rem;
+}
+
+h4 {
+    font-size: 2.4rem;
+    line-height: 1.35;
+    letter-spacing: -.08rem;
+}
+
+h5 {
+    font-size: 1.8rem;
+    line-height: 1.5;
+    letter-spacing: -.05rem;
+}
+
+h6 {
+    font-size: 1.5rem;
+    line-height: 1.6;
+    letter-spacing: 0;
+}
+
+@media (min-width: 550px) {
+    h1 {
+        font-size:5.0rem;
+    }
+
+    h2 {
+        font-size: 4.2rem;
+    }
+
+    h3 {
+        font-size: 3.6rem;
+    }
+
+    h4 {
+        font-size: 3.0rem;
+    }
+
+    h5 {
+        font-size: 2.4rem;
+    }
+
+    h6 {
+        font-size: 1.5rem;
+    }
+}
+
+.submit-row {
+    text-align: center;
+    margin-top: 1.5em;
+}
+
+
+input[type=range] {
+    /*removes default webkit styles*/
+    -webkit-appearance: none;
+    
+    /*fix for FF unable to apply focus style bug */
+    border: 1px solid white;
+    
+    /*required for proper track sizing in FF*/
+    width: 100% !important;
+}
+input[type=range]::-webkit-slider-runnable-track {
+    width: 300px;
+    height: 5px;
+    background: #ddd;
+    border: none;
+    border-radius: 3px;
+}
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    border: none;
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    background: goldenrod;
+    margin-top: -4px;
+}
+input[type=range]:focus {
+    outline: none;
+}
+input[type=range]:focus::-webkit-slider-runnable-track {
+    background: #ccc;
+}
+
+input[type=range]::-moz-range-track {
+    width: 300px;
+    height: 5px;
+    background: #ddd;
+    border: none;
+    border-radius: 3px;
+}
+input[type=range]::-moz-range-thumb {
+    border: none;
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    background: goldenrod;
+}
+
+/*hide the outline behind the border*/
+input[type=range]:-moz-focusring{
+    outline: 1px solid white;
+    outline-offset: -1px;
+}
+
+input[type=range]::-ms-track {
+    width: 300px;
+    height: 5px;
+    
+    /*remove bg colour from the track, we'll use ms-fill-lower and ms-fill-upper instead */
+    background: transparent;
+    
+    /*leave room for the larger thumb to overflow with a transparent border */
+    border-color: transparent;
+    border-width: 6px 0;
+
+    /*remove default tick marks*/
+    color: transparent;
+}
+input[type=range]::-ms-fill-lower {
+    background: #777;
+    border-radius: 10px;
+}
+input[type=range]::-ms-fill-upper {
+    background: #ddd;
+    border-radius: 10px;
+}
+input[type=range]::-ms-thumb {
+    border: none;
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    background: goldenrod;
+}
+input[type=range]:focus::-ms-fill-lower {
+    background: #888;
+}
+input[type=range]:focus::-ms-fill-upper {
+    background: #ccc;
+}
+
+
 .container:after,.row:after{
     content: "";
     display: table;
     clear: both;
 }
+
+.attributes-content {
+    box-sizing: border-box;
+    padding: 0;
+    padding-right: 6px;
+    margin: 0;
+    margin-bottom: 1em;
+}
+
+.attributes-content input[type="radio"] {
+    width: 0;
+    height: 0;
+    display: none;
+}
+
+.attributes-content label {
+    box-sizing: border-box;
+    display: inline-block;
+    vertical-align: middle;
+    vertical-align: auto;
+    text-align: center;
+    text-shadow: #ffffff;
+    background-color: #ffffff;
+    border: 1px solid #e8972c;
+    color: #e8972c;
+    padding: 5px 5px;
+    font-size: 12px;
+    cursor: pointer;
+    font-family: Helvetica;
+    border-radius: 0;
+    margin-right: -6px;
+}
+
+.attributes-content label img {
+    width: 60%;
+    margin-top: 2px;
+    transition: transform 0.3s;
+}
+
+
+.attributes-content label:hover img {
+    transform: scale(1.1,1.1);
+}
+
+
+.attributes-content input:first-child + label {
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
+
+.attributes-content label:last-child {
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+
+.attributes-content input:checked + label,.segmented label.selected,.segmented label.checked {
+    background-color: #e8972c;
+    color: #ffffff;
+}
+
+.attributes-content {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+}
+
+.attributes-content label {
+    -webkit-box-flex: 1;
+    -webkit-flex-grow: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+}
+
+.custom-radio {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.label-content {
+    display: inline-block;
+    margin-left: .5rem;
+    font-weight: normal;
+}
+
 footer {
     font-size: 1rem;
     color: #d4d4d4;
