@@ -22,8 +22,8 @@
     </div>
   </header>
 
-    <div class="container">
-      <form name="male" method="post" action="calculateCamel()">
+    <div id="camelCalcaulateContainer" class="container">
+      <form id="friendForm" name="friend" method="post" action="#">
 
         <div class="row form-row">
             <div class="four-column column">
@@ -124,22 +124,22 @@
                 <nav class="attributes-content">
                     <input type="radio" name="beard" value="none" id="beard-a" checked="checked" />
                     <label for="beard-a">
-                        <img src="/img/beard-none.png" alt="none">
+                        <img src="/images/beard-none.png" alt="none">
                     </label>
 
                     <input type="radio" name="beard" value="small" id="beard-b" />
                     <label for="beard-b">
-                        <img src="/img/beard-small.png" alt="small">
+                        <img src="/images/beard-small.png" alt="small">
                     </label>
 
                     <input type="radio" name="beard" value="middle" id="beard-c" />
                     <label for="beard-c">
-                        <img src="/img/beard-middle.png" alt="middle">
+                        <img src="/images/beard-middle.png" alt="middle">
                     </label>
 
                     <input type="radio" name="beard" value="large" id="beard-d" />
                     <label for="beard-d">
-                        <img src="/img/beard-full.png" alt="large">
+                        <img src="/images/beard-full.png" alt="large">
                     </label>
                 </nav>
             </div>
@@ -156,17 +156,17 @@
                   <nav class="attributes-content">
                       <input type="radio" name="body" value="muscle" id="biceps-a" checked="checked" />
                       <label for="biceps-a">
-                          <img src="/img/body-1.png" alt="A">
+                          <img src="/images/body-1.png" alt="A">
                       </label>
 
                       <input type="radio" name="body" value="normal" id="biceps-b" />
                       <label for="biceps-b">
-                          <img src="/img/body-2.png" alt="B">
+                          <img src="/images/body-2.png" alt="B">
                       </label>
 
                       <input type="radio" name="body" value="chubby" id="biceps-c" />
                       <label for="biceps-c">
-                          <img src="/img/body-3.png" alt="C">
+                          <img src="/images/body-3.png" alt="C">
                       </label>
                   </nav>
               </div>
@@ -174,13 +174,29 @@
       </div>
 
         <div class="row">
-          <div class="twelve columns submit-row">
+          <div class="twelve column submit-row">
               <input type="hidden" name="gender" value="male">
-              <button type="submit" class="button-primary">calculate</button>
+              <button type="button" class="button-primary" onclick="calculateCamels()">to calculate</button>
           </div>
       </div>
 
       </form>
+    </div>
+
+    <div id="camelResults" class="container hidden">
+        <div class="row">
+          <div class="twelve column txt-center">
+              <p class="result-text">Your friend is</p>
+              <p class="result-number">66</p>
+              <p class="result-text">worth camel</p>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="twelve column submit-row">
+              <button type="button" class="button-primary" onclick="recalculateCamels()">recalculate</button>
+          </div>
+        </div>
     </div>
 
     <footer class="container">
