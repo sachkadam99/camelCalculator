@@ -360,7 +360,7 @@ input[type=range]:focus {
     outline: none;
 }
 input[type=range]:focus::-webkit-slider-runnable-track {
-    background: #ccc;
+    background: #e8972c;
 }
 
 input[type=range]::-moz-range-track {

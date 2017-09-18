@@ -27,21 +27,21 @@
 
         <div class="row form-row">
             <div class="four-column column">
-                <h4><label for="age">Older</label> <output for="age" id="ageCount">50</output></h4>
+                <h4><label for="age">Older</label> <output for="age" id="ageCount">22</output></h4>
             </div>
             <div class="eight-column column">
-                <input type="range" min="0" max="100" value="50" id="age" 
+                <input type="range" min="14" max="70" name="age" value="22" id="age" 
               step="1" oninput="outputUpdate(value)">
             </div>
         </div>
 
         <div class="row form-row">
             <div class="four-column column">
-                <h4><label for="height">Height</label> <output for="height" id="volume">50</output></h4>
+                <h4><label for="height">Height</label> <output for="height" id="heightLength">170</output></h4>
             </div>
             <div class="eight-column column">
-                <input type="range" min="0" max="100" value="50" id="height" 
-              step="1" oninput="outputUpdate(value)">
+                <input type="range" min="140" max="220" name="height" value="170" id="height" 
+              step="1" oninput="heightUpdate(value)">
             </div>
         </div>
 
@@ -50,12 +50,12 @@
                 <h4>Haircolor</h4>
             </div>
             <div class="eight-column column">
-                <select name="haircolor" class="full-width">
-                    <option value="blonde">blonde</option>
-                    <option value="brown">brown</option>
-                    <option value="black">black</option>
-                    <option value="red">red</option>
-                    <option value="grey">grey</option>
+                <select id="haircolor" name="haircolor" class="full-width" max="50">
+                    <option value="10">blonde</option>
+                    <option value="20">brown</option>
+                    <option value="30">black</option>
+                    <option value="40">red</option>
+                    <option value="50">grey</option>
                 </select>
             </div>
         </div>
@@ -67,22 +67,22 @@
             <div class="eight-column column">
                 <div>
                     <nav class="attributes-content">
-                        <input type="radio" name="hair" value="long" id="l" checked="checked" />
+                        <input type="radio" name="hair" class="hairlength" value="10" id="l" checked="checked" />
                         <label for="l">
                             long
                         </label>
 
-                        <input type="radio" name="hair" value="middle" id="m" />
+                        <input type="radio" name="hair" class="hairlength" value="20" id="m" />
                         <label for="m">
                             middle
                         </label>
 
-                        <input type="radio" name="hair" value="short" id="s" />
+                        <input type="radio" name="hair" class="hairlength" value="30" id="s" />
                         <label for="s">
                             short
                         </label>
 
-                        <input type="radio" name="hair" value="bald" id="g" />
+                        <input type="radio" name="hair" class="hairlength" value="40" id="g" />
                         <label for="g">
                             bald
                         </label>
@@ -97,19 +97,19 @@
           </div>
           <div class="eight-column column">
               <label class="custom-radio">
-                  <input type="radio" name="eyecolor" value="blue" checked="checked">
+                  <input type="radio" id="eyecolor" name="eyecolor" value="10" max="40" checked="checked">
                   <span class="label-content">blue</span>
               </label>
               <label class="custom-radio">
-                  <input type="radio" name="eyecolor" value="green">
+                  <input type="radio" id="eyecolor" name="eyecolor" value="20" max="40">
                   <span class="label-content">green</span>
               </label>
               <label class="custom-radio">
-                  <input type="radio" name="eyecolor" value="brown">
+                  <input type="radio" id="eyecolor" name="eyecolor" value="30" max="40">
                   <span class="label-content">brown</span>
               </label>
               <label class="custom-radio">
-                  <input type="radio" name="eyecolor" value="grey">
+                  <input type="radio" id="eyecolor" name="eyecolor" value="40" max="40">
                   <span class="label-content">grey</span>
               </label>
           </div>
@@ -122,22 +122,22 @@
         <div class="eight-column column">
             <div>
                 <nav class="attributes-content">
-                    <input type="radio" name="beard" value="none" id="beard-a" checked="checked" />
+                    <input type="radio" name="beard" class="beardCheckbox" value="10" id="beard-a" checked="checked" />
                     <label for="beard-a">
                         <img src="/images/beard-none.png" alt="none">
                     </label>
 
-                    <input type="radio" name="beard" value="small" id="beard-b" />
+                    <input type="radio" name="beard" class="beardCheckbox" value="20" id="beard-b" />
                     <label for="beard-b">
                         <img src="/images/beard-small.png" alt="small">
                     </label>
 
-                    <input type="radio" name="beard" value="middle" id="beard-c" />
+                    <input type="radio" name="beard" class="beardCheckbox" value="30" id="beard-c" />
                     <label for="beard-c">
                         <img src="/images/beard-middle.png" alt="middle">
                     </label>
 
-                    <input type="radio" name="beard" value="large" id="beard-d" />
+                    <input type="radio" name="beard" class="beardCheckbox" value="40" id="beard-d" />
                     <label for="beard-d">
                         <img src="/images/beard-full.png" alt="large">
                     </label>
@@ -154,17 +154,17 @@
           <div class="eight-column column">
               <div>
                   <nav class="attributes-content">
-                      <input type="radio" name="body" value="muscle" id="biceps-a" checked="checked" />
+                      <input type="radio" name="body" class="bodyCheckbox" value="10" id="biceps-a" checked="checked" />
                       <label for="biceps-a">
                           <img src="/images/body-1.png" alt="A">
                       </label>
 
-                      <input type="radio" name="body" value="normal" id="biceps-b" />
+                      <input type="radio" name="body" class="bodyCheckbox" value="20" id="biceps-b" />
                       <label for="biceps-b">
                           <img src="/images/body-2.png" alt="B">
                       </label>
 
-                      <input type="radio" name="body" value="chubby" id="biceps-c" />
+                      <input type="radio" name="body" class="bodyCheckbox" value="30" id="biceps-c" />
                       <label for="biceps-c">
                           <img src="/images/body-3.png" alt="C">
                       </label>
@@ -175,8 +175,7 @@
 
         <div class="row">
           <div class="twelve column submit-row">
-              <input type="hidden" name="gender" value="male">
-              <button type="button" class="button-primary" onclick="calculateCamels()">to calculate</button>
+              <button type="button" class="button-primary" onclick="showCamels()">to calculate</button>
           </div>
       </div>
 
@@ -187,7 +186,7 @@
         <div class="row">
           <div class="twelve column txt-center">
               <p class="result-text">Your friend is</p>
-              <p class="result-number">66</p>
+              <p class="result-number" id="camelResultNumber">66</p>
               <p class="result-text">worth camel</p>
           </div>
         </div>
@@ -205,8 +204,6 @@
       </div>
     </footer>
     
-
-    <!-- build:js({.tmp,app}) scripts/scripts.js -->
     <script src="scripts/main.js"></script>
         
 </body>
